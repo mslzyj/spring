@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--bean之间的关系:1.继承  2.依赖-->
+    <bean id="address" class="spring03.Address"
+     p:city="xian" p:street="ziwu"></bean>
+     <!-- bean 配置的继承：使用bean的parent属性指定继承哪个bean的配置（父bean，子bean） -->
+    <bean id="address2" p:city="beijing" p:street="changan" parent="address"></bean>
+    <!-- 抽象bean不能被实例化，只能用来作为一个被继承的模板 -->
+    <!-- 如果某一个bean的Class属性没有指定，也没有继承其他的bean，则此bean只能被指定为抽象bean
+    <bean id="address" class="spring03.Address"
+     p:city="xian" p:street="ziwu" abstract="true"></bean>
+     -->
+     
+     <!-- 在配置person时，配置一个关联的car 即这个car依赖于这个bean-->
+     
+     <bean id="car" class="spring03.Car" p:brand="Audi" p:price="3000">
+     </bean>
+     
+     <bean id="person" class="spring03.Person"
+       p:name="Tom" p:address-ref="address" depends-on="car" >
+     </bean>
+</beans>
