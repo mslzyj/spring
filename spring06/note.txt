@@ -1,0 +1,7 @@
+1.spring整合hibernate：
+ （1）由IOC容器来管理Hibernate的SessionFactory
+ （2）让Hibernate使用上spring的声明事务
+2.整合步骤：
+ 1.加入Hibernate
+ 2.加入Spring
+ 3.整合 
