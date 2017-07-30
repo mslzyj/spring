@@ -1,0 +1,14 @@
+1.Spring 如何在web应用中使用
+  （1）.jar包：
+  spring-web-4.0.0.RELEASE.jar
+  spring-webmvc-4.0.0.RELEASE.jar
+  （2）.创建IOC容器：
+     I非Web应用在main方法中直接创建。
+     II在Web应用：在Web应用被服务器加载时就创建IOC容器。
+ (3).在Web环境下使用Spring
+2.Spring如何整合Struts2
+ （1）整合目标：使IOC容器来管理Struts2的Action。
+ （2）整合方法：
+   I 加入Struts2jar包
+   II在spring的IOC容器中配置Struts的action
+   III配置struts2的配置文件
