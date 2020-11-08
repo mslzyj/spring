@@ -24,6 +24,7 @@ public class Main {
 	   System.out.println(userRepository);
 
 		System.out.println("test11");
+		System.out.println("test22");
 
 	}
 }
