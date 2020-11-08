@@ -6,4 +6,5 @@ import org.springframework.stereotype.Component;
 public class TestObject {
     System.out.println("aaa11");
     System.out.println("aaa22");
+    System.out.println("aaa33");
 }
