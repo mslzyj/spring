@@ -9,5 +9,7 @@ public class Main {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("genenic.id.xml");
         UserService userService = (UserService) ctx.getBean("userService");
         userService.add();
+
+        System.out.prantln("bbb11");
 	}
 }
