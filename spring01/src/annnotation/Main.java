@@ -22,6 +22,8 @@ public class Main {
 	   
 	   UserRepository userRepository=(UserRepository) ctx.getBean("userRepository");
 	   System.out.println(userRepository);
-	   
+
+		System.out.println("test11");
+
 	}
 }
